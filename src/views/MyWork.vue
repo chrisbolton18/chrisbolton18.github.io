@@ -34,11 +34,11 @@ console.log("🔍 Projects Data Loaded:", projects)
 </script>
 
 <template>
-  <div class="w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 py-10">
+<div class="w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 py-6">
   <!-- 🔥 Check if this is showing in the console -->
     <h1 class="text-3xl font-bold">🔥 VueperSlides Debug</h1>
 
-    <vueper-slides class="w-full max-w-4xl h-[600px] mx-auto justify-center items-center" arrows :dragging ="false" :touchable="false">
+    <vueper-slides class="w-full max-w-8xl h-[700px] mx-auto justify-center items-center" arrows :dragging ="false" :touchable="false">
       <vueper-slide v-for="(project, index) in projects" 
         :key="index"
         :title="project.title">
@@ -136,9 +136,10 @@ console.log("🔍 Projects Data Loaded:", projects)
   height: 700px !important; /* Increased height */
   max-height: 700px !important;
   min-height: 700px !important;
-  overflow: hidden !important; /* Ensure no extra empty space */
-  padding-bottom: 20px; /* Reduce bottom padding */
+  overflow: visible !important; /* Allow content to expand */
+  padding-bottom: 10px; /* Reduce empty space at bottom */
   background: transparent !important;
+
 }
 
 .vueperslide {
@@ -147,11 +148,13 @@ console.log("🔍 Projects Data Loaded:", projects)
   justify-content: center !important;
   height: 100% !important;
   background: transparent !important;
+
 }
 
 .vueperslides__track {
   height: 100% !important;
 }
+
 
 
 
