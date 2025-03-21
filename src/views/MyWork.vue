@@ -18,79 +18,68 @@ const projects = [
     link2: 'https://github.com/chrisbolton18/ExoExplorer'
   },
   { 
-    title: 'Data Structures & Algorithms Tutor',
-    image: 'img/DSA.jpeg', 
-    description: 'Web app designed to help users visualize and understand various data structures and algorithms. It provides a user-friendly interface for exploring concepts such as arrays, linked lists, and more.', 
-    link1: 'https://chrisbolton18.github.io/DSA_Visualizer/',
-    link2: 'https://github.com/chrisbolton18/DSA_Visualizer'
+    title: 'Project 3', 
+    image: 'https://via.placeholder.com/600x400', 
+    description: 'Yet another great project.', 
+    link1: 'https://project3.com',
+    link2: 'https://example.com/more-info-project3'
   }
 ]
+
+// 🔥 Console Debugging
+console.log("🔍 Projects Data Loaded:", projects)
 </script>
 
 <template>
-  <div class="relative w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 py-16 overflow-hidden animate-fade-in">
-    
-    <!-- Floating Animated Background -->
-    <div class="floating-shapes">
-      <span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
+  <vueper-slides 
+    class="w-full max-w-6xl h-[800px] flex items-center justify-center bg-red-500" 
+    arrows 
+    :dragging="false" 
+    :touchable="false"
+    :key="projects.length"> <!-- Forces re-render if data changes -->
 
-    <vueper-slides 
-  class="w-full max-w-6xl h-[800px] flex items-center justify-center bg-red-500" 
-  arrows 
-  :dragging="false" 
-  :touchable="false"
-  :key="projects.length"> <!-- Forces re-render if data changes -->
+    <vueper-slide v-for="(project, index) in projects" 
+      :key="index"
+      :title="project.title">
+      
+      <template #content>
+        <div class="flex flex-col items-center text-center h-full w-full px-8 bg-green-500">
+          
+          <!-- 🔥 Debugging Text -->
+          <p class="text-4xl text-white">🔥 Content is here! 🔥</p>
 
-  <vueper-slide v-for="(project, index) in projects" 
-    :key="index"
-    :title="project.title">
-    
-    <template #content>
-      <div class="flex flex-col items-center text-center h-full w-full px-8 bg-green-500">
-        
-        <!-- 🔥 Debugging Text -->
-        <p class="text-4xl text-white">🔥 Content is here! 🔥</p>
+          <!-- 🔥 Console Log Debugging -->
+          <p class="text-lg text-white mt-4">Project Title: {{ project?.title || '❌ No Data' }}</p>
+          <p class="text-lg text-white">Project Description: {{ project?.description || '❌ No Data' }}</p>
 
-        <!-- 🔥 Project Debug -->
-        <p class="text-lg text-white mt-4">Project Title: {{ project?.title || '❌ No Data' }}</p>
-        <p class="text-lg text-white">Project Description: {{ project?.description || '❌ No Data' }}</p>
+          <!-- 🔥 Debug Image -->
+          <img :src="project?.image || 'https://via.placeholder.com/300/FF0000/FFFFFF?text=Image+Error'" 
+              alt="Project Image" 
+              class="w-full max-w-lg h-[300px] object-contain rounded-lg shadow-lg mt-4">
+          
+          <!-- 🔥 Debug Buttons -->
+          <div class="flex gap-6 mt-6">
+            <a 
+              :href="project?.link1 || '#'"
+              target="_blank"
+              class="px-5 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-md transition">
+              View
+            </a>
+            <a 
+              :href="project?.link2 || '#'"
+              target="_blank"
+              class="px-5 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg rounded-lg shadow-md transition">
+              Source
+            </a>
+          </div>
 
-        <!-- 🔥 Debug Image -->
-        <img :src="project?.image || 'https://via.placeholder.com/300/FF0000/FFFFFF?text=Image+Error'" 
-             alt="Project Image" 
-             class="w-full max-w-lg h-[300px] object-contain rounded-lg shadow-lg mt-4">
-        
-        <!-- 🔥 Debug Buttons -->
-        <div class="flex gap-6 mt-6">
-          <a 
-            :href="project?.link1 || '#'"
-            target="_blank"
-            class="px-5 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-md transition">
-            View
-          </a>
-          <a 
-            :href="project?.link2 || '#'"
-            target="_blank"
-            class="px-5 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg rounded-lg shadow-md transition">
-            Source
-          </a>
         </div>
+      </template>
 
-      </div>
-    </template>
-
-  </vueper-slide>
-</vueper-slides>
-
-
-
-
-
-  </div>
+    </vueper-slide>
+  </vueper-slides>
 </template>
+
 
 <style>
 /* Fade-in animation when entering */
