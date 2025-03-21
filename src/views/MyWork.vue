@@ -15,7 +15,7 @@ const projects = [
   },
   { 
     title: 'Exo Explorer', 
-    image: 'img/ExoExplorer.jpeg', 
+    image: '/img/ExoExplorer.jpeg', 
     description: 'Interactive web app for exoplanets.', 
     link1: 'https://bolst.github.io/ExoExplorer/',
     link2: 'https://github.com/chrisbolton18/ExoExplorer'
@@ -130,4 +130,16 @@ console.log("🔍 Projects Data Loaded:", projects)
   50% { transform: translateY(20px) translateX(-20px) scale(1.1); opacity: 0.9; }
   100% { transform: translateY(-20px) translateX(20px) scale(0.9); opacity: 0.6; }
 }
+.vueperslides {
+  height: auto !important;  /* ✅ Let VueperSlides fit content */
+}
+
+.vueperslides__track {
+  min-height: 600px; /* Adjust height for content */
+}
+
+.vueperslides__arrow {
+  z-index: 10 !important;  /* Ensure arrows are visible */
+}
+
 </style>
