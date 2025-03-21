@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply Inter globally */
+body {
+  @apply bg-gray-900 text-white font-inter;
+}
+
+
+/* Customize link styles */
+a {
+  @apply text-blue-400 hover:text-blue-300 transition-colors;
+}
+
+/* Center the main app container */
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* Button styles */
+button {
+  @apply px-6 py-3 rounded-lg text-white bg-blue-600 font-semibold shadow-md hover:bg-blue-500 transition;
+}
+
+/* Headings */
+h1 {
+  @apply text-5xl font-bold;
+}
+
+h2 {
+  @apply text-3xl font-semibold;
+}
+
+h3 {
+  @apply text-2xl font-medium;
+}
