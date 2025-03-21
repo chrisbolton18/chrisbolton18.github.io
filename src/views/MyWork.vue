@@ -44,7 +44,9 @@ console.log("🔍 Projects Data Loaded:", projects)
         :title="project.title">
         
         <template #content>
-          <div class="flex flex-col items-center text-center p-6">
+          
+  <div class="flex flex-col items-center text-center p-6 bg-transparent">
+
             
             <!-- 🔥 Debugging Text -->
             <p class="text-4xl text-white">🔥 Content is here!</p>
@@ -136,6 +138,8 @@ console.log("🔍 Projects Data Loaded:", projects)
   min-height: 600px !important;
   overflow: hidden !important; /* Ensure no extra empty space */
   padding-bottom: 50px;
+  background: transparent !important;
+
 }
 
 .vueperslide {
@@ -143,6 +147,8 @@ console.log("🔍 Projects Data Loaded:", projects)
   align-items: center !important;
   justify-content: center !important;
   height: 100% !important;
+  background: transparent !important;
+
 }
 
 .vueperslides__track {
