@@ -2,7 +2,6 @@
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 
-// ✅ Confirm the data is correct
 const projects = [
   { 
     title: 'Bolton Cup', 
@@ -27,98 +26,85 @@ const projects = [
   }
 ]
 
-// 🔥 Log the data in the console
-console.log("🔍 Projects Data Loaded:", projects)
+// For debugging
+console.log("Projects data loaded:", projects)
 </script>
 
 <template>
   <div class="w-screen max-w-8xl min-h-screen flex flex-col justify-center items-center text-white px-8 pt-12 pb-24">
-    <!-- 🔥 Debugging Header -->
-    <h1 class="text-3xl font-bold mb-6">🔥 VueperSlides Debug</h1>
-
-    <!-- ✅ Fix: Increased Height & Proper Spacing -->
-    <vueper-slides class="w-full max-w-5xl h-[700px] mx-auto justify-center items-center" arrows :dragging="false" :touchable="false">
-      <vueper-slide v-for="(project, index) in projects" :key="index" :title="project.title">
-        <template #content>
-          <div class="flex flex-col items-center text-center p-6">
-            <p class="text-4xl text-white">🔥 Content is here!</p>
-
-            <p class="text-lg text-white mt-4">Title: {{ project?.title || '❌ No Title' }}</p>
-            <p class="text-lg text-white">Description: {{ project?.description || '❌ No Description' }}</p>
-
-            <img :src="project?.image" 
-                alt="Project Image" 
-                class="w-full max-w-[500px] h-auto object-contain rounded-lg shadow-lg mt-4">
-
-            <!-- ✅ Fix: Keep Dots & Buttons Below Image Properly -->
-            <div class="w-full flex flex-col items-center justify-center mt-8 gap-6">
-              <div class="vueperslides__bullets"></div> <!-- Dots -->
+    <h1 class="text-3xl font-bold mb-12">My Projects</h1>
+    
+    <div class="slider-container w-full max-w-5xl mx-auto relative">
+      <vueper-slides
+        class="w-full"
+        :visible-slides="1"
+        :gap="0"
+        :bullets="true"
+        :arrows="true"
+        :dragging-distance="70"
+        fixed-height="500px"
+        :touchable="true"
+        fade
+        :autoplay="false">
+        
+        <vueper-slide 
+          v-for="(project, index) in projects" 
+          :key="index">
+          <template #content>
+            <div class="slide-content w-full h-full flex flex-col items-center justify-center px-8 py-12">
+              <h2 class="text-3xl font-bold mb-4">{{ project.title }}</h2>
+              
+              <img 
+                :src="project.image" 
+                :alt="`${project.title} screenshot`" 
+                class="w-full max-w-md h-auto object-contain rounded-lg shadow-lg mb-6"
+                @error="$event.target.src = 'https://via.placeholder.com/500x300?text=Image+Not+Found'"
+              />
+              
+              <p class="text-lg mb-8 text-center max-w-2xl">{{ project.description }}</p>
               
               <div class="flex gap-6">
                 <a 
-                  :href="project?.link1 || '#'"
-                  target="_blank"
+                  :href="project.link1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   class="btn btn-primary">
-                  View
+                  View Project
                 </a>
                 <a 
-                  :href="project?.link2 || '#'"
-                  target="_blank"
+                  :href="project.link2" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   class="btn btn-secondary">
-                  Source
+                  View Source
                 </a>
               </div>
             </div>
-          </div>
-        </template>
-      </vueper-slide>
-    </vueper-slides>
+          </template>
+        </vueper-slide>
+      </vueper-slides>
+    </div>
   </div>
 </template>
 
 <style>
-/* 🎨 Animations */
-.animate-fade-in {
-  animation: fadeIn 1s ease-in-out;
+/* Reset for VueperSlides */
+.vueperslides, .vueperslide {
+  overflow: visible !important;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Base styles */
+body {
+  background-color: #111827;
 }
 
-/* 🌐 Floating Background */
-.floating-shapes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  min-height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
+/* Slider container */
+.slider-container {
+  position: relative;
 }
 
-.floating-shapes span {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
-  animation: float-random 5s infinite alternate ease-in-out;
-}
-
-/* 🎯 Vueper Slides Styles */
+/* VueperSlides core overrides */
 .vueperslides {
-  height: 700px !important; /* Ensure enough space for buttons & dots */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.vueperslide {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: 100% !important;
   background: transparent !important;
 }
 
@@ -126,25 +112,74 @@ console.log("🔍 Projects Data Loaded:", projects)
   height: 100% !important;
 }
 
-/* 🎯 Fixed Dots Placement */
-.vueperslides__bullets {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
+.vueperslide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: rgba(17, 24, 39, 0.8) !important;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
 }
 
-/* 🎯 Buttons Styling */
+/* Slide content */
+.slide-content {
+  max-width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Navigation controls */
+.vueperslides__arrow {
+  color: white !important;
+  background-color: rgba(37, 99, 235, 0.5) !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  z-index: 10 !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.vueperslides__arrow:hover {
+  background-color: rgba(37, 99, 235, 0.8) !important;
+}
+
+.vueperslides__arrow--prev {
+  left: -22px !important;
+}
+
+.vueperslides__arrow--next {
+  right: -22px !important;
+}
+
+/* Bullets */
+.vueperslides__bullets {
+  position: relative !important;
+  margin-top: 20px !important;
+  justify-content: center !important;
+}
+
+.vueperslides__bullet {
+  margin: 0 5px !important;
+  padding: 12px !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.vueperslides__bullet--active {
+  background-color: rgba(37, 99, 235, 0.8) !important;
+}
+
+/* Button styles */
 .btn {
   display: inline-block;
-  min-width: 120px;
+  min-width: 150px;
   text-align: center;
-  padding: 10px 15px;
-  font-size: 1rem;
+  padding: 12px 20px;
   font-weight: bold;
   border-radius: 8px;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease;
   text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
 .btn-primary {
@@ -154,21 +189,38 @@ console.log("🔍 Projects Data Loaded:", projects)
 
 .btn-primary:hover {
   background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .btn-secondary {
-  background-color: #6b7280;
+  background-color: rgba(107, 114, 128, 0.8);
   color: white;
 }
 
 .btn-secondary:hover {
   background-color: #4b5563;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(75, 85, 99, 0.3);
 }
 
-/* 🎯 Spacing Fix */
-.vueperslide .flex.gap-6 {
-  margin-top: 20px;
-  justify-content: center;
-  align-items: center;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vueperslides__arrow {
+    transform: scale(0.8);
+  }
+  
+  .vueperslides__arrow--prev {
+    left: -12px !important;
+  }
+
+  .vueperslides__arrow--next {
+    right: -12px !important;
+  }
+  
+  .btn {
+    min-width: 120px;
+    padding: 10px 16px;
+  }
 }
 </style>
