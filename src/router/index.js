@@ -5,10 +5,10 @@ import MyWork from '../views/MyWork.vue';
 import Contact from '../views/Contact.vue';
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About },
-  { path: '/mywork', component: MyWork },
-  { path: '/contact', component: Contact },
+  { path: '/vue-portfolio/', component: Home },
+  { path: '/vue-portfolio/about', component: About },
+  { path: '/vue-portfolio/mywork', component: MyWork },
+  { path: '/vue-portfolio/contact', component: Contact },
 ];
 
 const router = createRouter({

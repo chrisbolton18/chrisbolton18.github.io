@@ -5,6 +5,6 @@ import './style.css';  // Tailwind CSS import
 import 'vueperslides/dist/vueperslides.css'
 
 
-const app = createApp(App);
-app.use(router);
-app.mount('#app');
+const app = createApp(App)
+.use(router)
+.mount('#app');
