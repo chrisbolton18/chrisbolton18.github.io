@@ -16,19 +16,20 @@ const projects = [
   },
   { 
     title: 'Exo Explorer', 
-    image: '/img/ExoExplorer.jpeg', 
+    image: '/img/ExoExplorer.jpeg',  // ✅ Ensure this file is inside `public/img/`
     description: 'Interactive web app for exoplanets.', 
     link1: 'https://bolst.github.io/ExoExplorer/',
     link2: 'https://github.com/chrisbolton18/ExoExplorer'
   },
   { 
     title: 'Project 3', 
-    image: 'https://via.placeholder.com/600x400', 
+    image: 'https://placehold.co/600x400',  // ✅ Replaced broken placeholder
     description: 'Yet another great project.', 
     link1: 'https://project3.com',
     link2: 'https://example.com/more-info-project3'
   }
 ];
+
 
 // 🔥 Debug: Log each project and image URL
 projects.forEach((project, index) => {
