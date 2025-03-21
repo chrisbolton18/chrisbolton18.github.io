@@ -37,7 +37,13 @@ const projects = [
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <vueper-slides class="w-full max-w-6xl h-[800px] flex items-center justify-center bg-red-500" arrows :dragging="false" :touchable="false">
+    <vueper-slides 
+  class="w-full max-w-6xl h-[800px] flex items-center justify-center bg-red-500" 
+  arrows 
+  :dragging="false" 
+  :touchable="false"
+  :key="projects.length"> <!-- Forces re-render if data changes -->
+
   <vueper-slide v-for="(project, index) in projects" 
     :key="index"
     :title="project.title">
@@ -45,19 +51,19 @@ const projects = [
     <template #content>
       <div class="flex flex-col items-center text-center h-full w-full px-8 bg-green-500">
         
-        <!-- 🔥 Fallback Debugging Text -->
-        <p class="text-4xl text-white">🔥 If you see this, content is loading! 🔥</p>
+        <!-- 🔥 Debugging Text -->
+        <p class="text-4xl text-white">🔥 Content is here! 🔥</p>
 
-        <!-- 🔥 Debug: Check if Project Data Exists -->
+        <!-- 🔥 Project Debug -->
         <p class="text-lg text-white mt-4">Project Title: {{ project?.title || '❌ No Data' }}</p>
         <p class="text-lg text-white">Project Description: {{ project?.description || '❌ No Data' }}</p>
 
-        <!-- 🔥 Debug: Image -->
+        <!-- 🔥 Debug Image -->
         <img :src="project?.image || 'https://via.placeholder.com/300/FF0000/FFFFFF?text=Image+Error'" 
              alt="Project Image" 
              class="w-full max-w-lg h-[300px] object-contain rounded-lg shadow-lg mt-4">
         
-        <!-- 🔥 Debug: Buttons -->
+        <!-- 🔥 Debug Buttons -->
         <div class="flex gap-6 mt-6">
           <a 
             :href="project?.link1 || '#'"
