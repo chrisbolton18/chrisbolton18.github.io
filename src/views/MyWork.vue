@@ -84,7 +84,8 @@ const projects = [
 </script>
 
 <style scoped>
-/* Floating Animated Background */
+
+/* animation background */
 .floating-shapes {
   position: absolute;
   top: 0;
