@@ -37,27 +37,27 @@ const projects = [
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <vueper-slides class="w-full max-w-8xl h-[950px]" arrows :dragging="false" :touchable="false">
+    <vueper-slides class="w-full max-w-8xl h-[1000px]" arrows :dragging="false" :touchable="false">
   <vueper-slide v-for="(project, index) in projects" 
     :key="index"
     :title="project.title">
     
     <template #content>
-      <div class="flex flex-col items-center text-center p-8 h-full max-w-3xl mx-auto">
+      <div class="flex flex-col items-center text-center p-8 h-full max-w-3xl mx-auto pb-20">
         
         <!-- Project Image -->
         <img :src="project.image" alt="" class="w-full h-[500px] object-contain rounded-lg shadow-lg">
         
-        <!-- Push Title Down -->
-        <h3 class="text-4xl font-bold mt-16">{{ project.title }}</h3>
+        <!-- Push Title Down More -->
+        <h3 class="text-4xl font-bold mt-20">{{ project.title }}</h3>
 
         <!-- Push Description Down -->
-        <p class="text-xl text-gray-300 mt-10 leading-relaxed max-w-2xl">
+        <p class="text-xl text-gray-300 mt-12 leading-relaxed max-w-2xl">
           {{ project.description }}
         </p>
 
-        <!-- Push Buttons Lower -->
-        <div class="flex gap-6 mt-12">
+        <!-- Push Buttons Down -->
+        <div class="flex gap-6 mt-14">
           <a 
             :href="project.link1"
             target="_blank"
@@ -77,6 +77,7 @@ const projects = [
 
   </vueper-slide>
 </vueper-slides>
+
 
 
 
