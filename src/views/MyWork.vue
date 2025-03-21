@@ -47,7 +47,7 @@ console.log("🔍 Projects Data Loaded:", projects)
 
             <img :src="project?.image" 
                 alt="Project Image" 
-                class="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-lg mt-4">
+                class="w-full max-w-[700px] h-auto object-contain rounded-lg shadow-lg mt-4">
 
             <!-- ✅ Adjusted Dots & Buttons Container -->
             <div class="w-full flex flex-col items-center justify-center mt-6 gap-6">
