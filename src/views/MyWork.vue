@@ -1,31 +1,4 @@
-<script setup>
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
 
-const projects = [
-  { 
-    title: 'Bolton Cup', 
-    image: 'https://iiedqecnfyojvubvugmy.supabase.co/storage/v1/object/public/logos/boltoncup.png', 
-    description: 'Website for the annual Bolton Cup hockey tournament. It holds game results, player statistics, player profiles, etc., providing fans and participants with up-to-date tournament information and highlights.', 
-    link1: 'https://boltoncup.ca/',  
-    link2: 'https://github.com/bolst/BoltonCup' 
-  },
-  { 
-    title: 'Exo Explorer', 
-    image: 'img/ExoExplorer.jpeg', 
-    description: 'Interactive web app that showcases the planets that the Habitable Worlds Observatory has discovered. Includes an adjusting telescope, planet and exoplanet descriptions, and real-time planet updates.', 
-    link1: 'https://bolst.github.io/ExoExplorer/',
-    link2: 'https://github.com/chrisbolton18/ExoExplorer'
-  },
-  { 
-    title: 'Data Structures & Algorithms Tutor',
-    image: 'img/DSA.jpeg', 
-    description: 'Web app designed to help users visualize and understand various data structures and algorithms. It provides a user-friendly interface for exploring concepts such as arrays, linked lists, and more.', 
-    link1: 'https://chrisbolton18.github.io/DSA_Visualizer/',
-    link2: 'https://github.com/chrisbolton18/DSA_Visualizer'
-  }
-]
-</script>
 
 <script setup>
 import { VueperSlides, VueperSlide } from 'vueperslides'
