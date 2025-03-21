@@ -32,7 +32,7 @@ console.log("🔍 Projects Data Loaded:", projects)
 </script>
 
 <template>
-  <div class="w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 pt-12 pb-24">
+  <div class="w-screen max-w-8xl min-h-screen flex flex-col justify-center items-center text-white px-8 pt-12 pb-24">
     <!-- 🔥 Debugging Header -->
     <h1 class="text-3xl font-bold">🔥 VueperSlides Debug</h1>
 
