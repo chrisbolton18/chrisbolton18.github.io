@@ -1,11 +1,11 @@
 <template>
-  <div class="p-6 flex flex-col items-center mt-10">
+  <div class="p-6 flex flex-col items-center mt-40">
     <vueper-slides
       :visible-slides="1"
       :bullets="true"
       :arrows="true"
       :touchable="false"
-      fixed-height="700px"
+      fixed-height="999px"
       class="rounded-2xl shadow-md w-[999px] mx-auto"
     >
       <vueper-slide
