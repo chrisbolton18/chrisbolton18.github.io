@@ -10,10 +10,10 @@
 
 
     <div class="w-11/12 max-w-6xl text-center space-y-8 relative z-10">  
+
       <br>
       <br>
-      <br>
-      <br>
+
       <h2 class="text-5xl font-bold text-blue-400 animate-fade-in mb-6">About Me</h2>
       <br>
       <p class="text-2xl leading-relaxed text-gray-300 animate-fade-in delay-200 mb-6">
@@ -24,12 +24,10 @@
 
       <br>
       <br>
-      <br>
-      <br>
+  
 
       <h2 class="text-5xl font-bold text-blue-400 animate-fade-in mb-6">Tech Stack</h2>
 
-      <br>
       <br>
 
       <div class="grid grid-cols-4 gap-10 text-left mt-8 animate-fade-in delay-800 relative z-10">
