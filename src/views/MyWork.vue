@@ -5,7 +5,7 @@ import 'vueperslides/dist/vueperslides.css'
 // ✅ Debugging: Check if component is loaded
 console.log("🔥 VueperSlides Component Loaded");
 
-// ✅ Confirm the data is correct
+// ✅ Corrected Image URLs
 const projects = [
   { 
     title: 'Bolton Cup', 
@@ -16,20 +16,19 @@ const projects = [
   },
   { 
     title: 'Exo Explorer', 
-    image: '/img/ExoExplorer.jpeg',  // ✅ Ensure this file is inside `public/img/`
+    image: 'https://placehold.co/800x600',  // ✅ Using a proper placeholder
     description: 'Interactive web app for exoplanets.', 
     link1: 'https://bolst.github.io/ExoExplorer/',
     link2: 'https://github.com/chrisbolton18/ExoExplorer'
   },
   { 
     title: 'Project 3', 
-    image: 'https://placehold.co/600x400',  // ✅ Replaced broken placeholder
+    image: 'https://placehold.co/800x600', // ✅ Another valid placeholder
     description: 'Yet another great project.', 
     link1: 'https://project3.com',
     link2: 'https://example.com/more-info-project3'
   }
 ];
-
 
 // 🔥 Debug: Log each project and image URL
 projects.forEach((project, index) => {
@@ -42,7 +41,7 @@ projects.forEach((project, index) => {
   <div class="w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 pt-12 pb-24">
     <h1 class="text-3xl font-bold mb-12">🔥 My Projects (Debug Mode)</h1>
     
-    <!-- VueperSlides set to maximum height (100vh) and removed arrows -->
+    <!-- VueperSlides set to maximum height (100vh) -->
     <vueper-slides 
       class="w-full max-w-6xl h-screen mx-auto flex items-center justify-center"
       :dragging="false"
