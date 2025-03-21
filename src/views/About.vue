@@ -7,7 +7,7 @@
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <div class="w-11/12 max-w-6xl text-center space-y-16 relative z-10 mt-10 mb-20">  
+    <div class="w-11/12 max-w-6xl text-center space-y-16 relative z-10 mt-5 mb-20">  
       <h2 class="text-5xl font-bold text-blue-400 animate-fade-in">About Me</h2>
       <p class="text-2xl leading-relaxed text-gray-300 animate-fade-in delay-200">
         I am in my third year of studying Computer Science at the University of Windsor,
