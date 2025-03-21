@@ -25,69 +25,41 @@ const projects = [
     link2: 'https://example.com/more-info-project3'
   }
 ]
-
-// For debugging
-console.log("Projects data loaded:", projects)
 </script>
 
 <template>
   <div class="w-screen max-w-8xl min-h-screen flex flex-col justify-center items-center text-white px-8 pt-12 pb-24">
     <h1 class="text-3xl font-bold mb-12">My Projects</h1>
     
-    <div class="slider-container w-full max-w-5xl mx-auto relative">
-      <vueper-slides
-        class="w-full"
-        :visible-slides="1"
-        :gap="0"
-        :bullets="true"
-        :arrows="true"
-        :dragging-distance="70"
-        fixed-height="500px"
-        :touchable="true"
-        fade
-        :autoplay="false">
-        
-        <vueper-slide 
-          v-for="(project, index) in projects" 
-          :key="index">
-          <template #content>
-            <div class="slide-content w-full h-full flex flex-col items-center justify-center px-8 py-12">
-              <h2 class="text-3xl font-bold mb-4">{{ project.title }}</h2>
-              
-              <img 
-                :src="project.image" 
-                :alt="`${project.title} screenshot`" 
-                class="w-full max-w-md h-auto object-contain rounded-lg shadow-lg mb-6"
-                @error="$event.target.src = 'https://via.placeholder.com/500x300?text=Image+Not+Found'"
-              />
-              
-              <p class="text-lg mb-8 text-center max-w-2xl">{{ project.description }}</p>
-              
-              <div class="flex gap-6">
-                <a 
-                  :href="project.link1" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="btn btn-primary">
-                  View Project
-                </a>
-                <a 
-                  :href="project.link2" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="btn btn-secondary">
-                  View Source
-                </a>
-              </div>
+    <!-- Super simplified approach -->
+    <div class="w-full max-w-5xl mx-auto">
+      <vueper-slides>
+        <vueper-slide v-for="(project, i) in projects" :key="i">
+          <div slot="content" class="bg-gray-800 p-8 rounded-lg w-full h-full flex flex-col items-center">
+            <h2 class="text-2xl font-bold text-white mb-4">{{ project.title }}</h2>
+            <img :src="project.image" :alt="project.title" class="max-w-md h-auto mb-4">
+            <p class="text-white mb-4">{{ project.description }}</p>
+            <div class="flex space-x-4">
+              <a :href="project.link1" class="bg-blue-600 text-white px-4 py-2 rounded">View</a>
+              <a :href="project.link2" class="bg-gray-600 text-white px-4 py-2 rounded">Source</a>
             </div>
-          </template>
+          </div>
         </vueper-slide>
       </vueper-slides>
     </div>
   </div>
 </template>
 
+
 <style>
+.vueper-slide {
+  background: #1f2937 !important;
+}
+
+.vueperslides__track {
+  min-height: 400px !important;
+}
+
 /* Reset for VueperSlides */
 .vueperslides, .vueperslide {
   overflow: visible !important;
@@ -106,6 +78,8 @@ body {
 /* VueperSlides core overrides */
 .vueperslides {
   background: transparent !important;
+  height: 500px !important;
+
 }
 
 .vueperslides__track {
@@ -119,6 +93,8 @@ body {
   background-color: rgba(17, 24, 39, 0.8) !important;
   border-radius: 12px;
   backdrop-filter: blur(8px);
+  height: 500px !important;
+
 }
 
 /* Slide content */
