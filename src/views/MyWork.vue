@@ -16,14 +16,14 @@ const projects = [
   },
   { 
     title: 'Exo Explorer', 
-    image: 'https://placehold.co/800x600',  // ✅ Using a proper placeholder
+    image: 'https://via.placeholder.com/600x400?text=Placeholder+Image',  // ✅ Using a proper placeholder
     description: 'Interactive web app for exoplanets.', 
     link1: 'https://bolst.github.io/ExoExplorer/',
     link2: 'https://github.com/chrisbolton18/ExoExplorer'
   },
   { 
     title: 'Project 3', 
-    image: 'https://placehold.co/800x600', // ✅ Another valid placeholder
+    image: 'https://via.placeholder.com/600x400?text=Placeholder+Image', // ✅ Another valid placeholder
     description: 'Yet another great project.', 
     link1: 'https://project3.com',
     link2: 'https://example.com/more-info-project3'
@@ -84,21 +84,18 @@ projects.forEach((project, index) => {
 <style>
 /* 🌟 Force max height */
 .vueperslides {
-  height: 100vh !important;
-  max-height: 100vh !important;
-  overflow: hidden !important;
+  height: 90vh !important;
+  max-height: 90vh !important;
 }
 
 .vueperslides__track {
   height: 100% !important;
 }
 
-/* 🔄 Fix image scaling */
 .vueperslide img {
-  max-width: 90% !important;
-  max-height: 80vh !important;
-  object-fit: contain !important;
+  max-height: 75vh !important;
 }
+
 
 /* 🎯 Remove Arrows */
 .vueperslides__arrow {
