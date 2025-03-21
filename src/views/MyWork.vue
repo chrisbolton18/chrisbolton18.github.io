@@ -38,7 +38,7 @@ console.log("🔍 Projects Data Loaded:", projects)
     <!-- 🔥 Check if this is showing in the console -->
     <h1 class="text-3xl font-bold">🔥 VueperSlides Debug</h1>
 
-    <vueper-slides class="w-full max-w-4xl h-[700px] bg-red-500" arrows>
+    <vueper-slides class="w-full max-w-4xl h-[600px] bg-red-500" arrows :dragging ="false" :touchable="false">
       <vueper-slide v-for="(project, index) in projects" 
         :key="index"
         :title="project.title">
@@ -131,15 +131,20 @@ console.log("🔍 Projects Data Loaded:", projects)
   100% { transform: translateY(-20px) translateX(20px) scale(0.9); opacity: 0.6; }
 }
 .vueperslides {
-  height: auto !important;  /* ✅ Auto-adjust height */
+  max-height: 700px !important; /* Ensure it doesn't exceed a set height */
+  min-height: 500px !important; /* Ensures a minimum height */
+  overflow: hidden !important; /* Prevents unnecessary scrolling */
+}
+
+.vueperslide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important; /* Ensures each slide uses full height */
 }
 
 .vueperslides__track {
-  min-height: 600px; /* ✅ Ensure content fits */
-}
-
-.vueperslides__arrow {
-  z-index: 10 !important;  /* ✅ Ensure arrows stay visible */
+  height: 100% !important;
 }
 
 </style>
