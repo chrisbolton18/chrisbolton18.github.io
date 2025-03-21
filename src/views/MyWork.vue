@@ -51,9 +51,9 @@ console.log("🔍 Projects Data Loaded:", projects)
                 class="w-full max-w-[500px] h-auto object-contain rounded-lg shadow-lg mt-4">
 
             <!-- ✅ Fix: Keep Dots & Buttons Below Image Properly -->
-            <div class="w-full flex flex-col items-center justify-center mt-8 gap-4">
+            <div class="w-full flex flex-col items-center justify-center mt-8 gap-6">
               <div class="vueperslides__bullets"></div> <!-- Dots -->
-
+              
               <div class="flex gap-6">
                 <a 
                   :href="project?.link1 || '#'"
@@ -107,6 +107,13 @@ console.log("🔍 Projects Data Loaded:", projects)
 }
 
 /* 🎯 Vueper Slides Styles */
+.vueperslides {
+  height: 700px !important; /* Ensure enough space for buttons & dots */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .vueperslide {
   display: flex !important;
   align-items: center !important;
@@ -123,7 +130,7 @@ console.log("🔍 Projects Data Loaded:", projects)
 .vueperslides__bullets {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
