@@ -45,30 +45,28 @@ const projects = [
     <template #content>
       <div class="flex flex-col items-center text-center h-full w-full px-8 bg-green-500">
         
-        <!-- DEBUG TEXT -->
-        <p class="text-4xl text-white">TEST CONTENT</p>
+        <!-- 🔥 Fallback Debugging Text -->
+        <p class="text-4xl text-white">🔥 If you see this, content is loading! 🔥</p>
 
-        <!-- Project Image -->
-        <img :src="project.image" alt="Project Image" class="w-full max-w-lg h-[300px] object-contain rounded-lg shadow-lg">
+        <!-- 🔥 Debug: Check if Project Data Exists -->
+        <p class="text-lg text-white mt-4">Project Title: {{ project?.title || '❌ No Data' }}</p>
+        <p class="text-lg text-white">Project Description: {{ project?.description || '❌ No Data' }}</p>
+
+        <!-- 🔥 Debug: Image -->
+        <img :src="project?.image || 'https://via.placeholder.com/300/FF0000/FFFFFF?text=Image+Error'" 
+             alt="Project Image" 
+             class="w-full max-w-lg h-[300px] object-contain rounded-lg shadow-lg mt-4">
         
-        <!-- Title -->
-        <h3 class="text-3xl font-bold mt-6">{{ project.title }}</h3>
-
-        <!-- Description -->
-        <p class="text-lg text-gray-300 mt-4 leading-relaxed max-w-2xl">
-          {{ project.description }}
-        </p>
-
-        <!-- Buttons -->
+        <!-- 🔥 Debug: Buttons -->
         <div class="flex gap-6 mt-6">
           <a 
-            :href="project.link1"
+            :href="project?.link1 || '#'"
             target="_blank"
             class="px-5 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-md transition">
             View
           </a>
           <a 
-            :href="project.link2"
+            :href="project?.link2 || '#'"
             target="_blank"
             class="px-5 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg rounded-lg shadow-md transition">
             Source
