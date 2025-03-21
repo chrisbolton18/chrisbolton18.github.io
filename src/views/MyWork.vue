@@ -36,7 +36,7 @@ console.log("🔍 Projects Data Loaded:", projects)
     <!-- 🔥 Debugging Header -->
     <h1 class="text-3xl font-bold">🔥 VueperSlides Debug</h1>
 
-    <vueper-slides class="w-full max-w-4xl h-auto mx-auto justify-center items-center" arrows :dragging="false" :touchable="false">
+    <vueper-slides class="w-full max-w-8xl h-auto mx-auto justify-center items-center" arrows :dragging="false" :touchable="false">
       <vueper-slide v-for="(project, index) in projects" :key="index" :title="project.title">
         <template #content>
           <div class="flex flex-col items-center text-center p-6">
