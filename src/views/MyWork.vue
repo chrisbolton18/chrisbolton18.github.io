@@ -37,27 +37,27 @@ const projects = [
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <vueper-slides class="w-full max-w-8xl h-[1100px] flex items-center justify-center" arrows :dragging="false" :touchable="false">
+    <vueper-slides class="w-full max-w-8xl h-[1200px] flex items-center justify-center" arrows :dragging="false" :touchable="false">
   <vueper-slide v-for="(project, index) in projects" 
     :key="index"
     :title="project.title">
     
     <template #content>
-      <div class="flex flex-col items-center text-center h-full w-full justify-between py-16">
+      <div class="flex flex-col items-center text-center h-full w-full justify-between py-24">
         
         <!-- Project Image (Fixed Height) -->
         <img :src="project.image" alt="" class="w-full max-w-lg h-[500px] object-contain rounded-lg shadow-lg">
         
-        <!-- Title (Always Visible) -->
-        <h3 class="text-4xl font-bold">{{ project.title }}</h3>
+        <!-- Title (Lowered Further) -->
+        <h3 class="text-4xl font-bold mt-24">{{ project.title }}</h3>
 
-        <!-- Description (No More Cutoff) -->
-        <p class="text-xl text-gray-300 leading-relaxed max-w-2xl">
+        <!-- Description (Pushed Even Lower) -->
+        <p class="text-xl text-gray-300 mt-16 leading-relaxed max-w-2xl">
           {{ project.description }}
         </p>
 
-        <!-- Buttons (Force to Bottom) -->
-        <div class="flex gap-6">
+        <!-- Buttons (Forced to Bottom) -->
+        <div class="flex gap-6 mt-16">
           <a 
             :href="project.link1"
             target="_blank"
