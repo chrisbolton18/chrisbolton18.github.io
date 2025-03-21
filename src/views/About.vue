@@ -1,7 +1,6 @@
 <template>
   <div class="relative w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 py-24 lg:py-40 overflow-hidden animate-fade-in">
     
-    <!-- Floating Animated Background -->
     <div class="floating-shapes">
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
@@ -56,7 +55,6 @@
 </template>
 
 <style>
-/* Fix vertical alignment */
 .animate-fade-in {
   animation: fadeIn 1s ease-in-out;
 }
@@ -65,7 +63,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Floating Circles Animation */
 .floating-shapes {
   position: absolute;
   top: 0;
@@ -83,7 +80,6 @@
   animation: float-random 5s infinite alternate ease-in-out;
 }
 
-/* Floating Circles Positions */
 .floating-shapes span:nth-child(1) { width: 60px; height: 60px; left: 5%; top: 15%; animation-duration: 6s; }
 .floating-shapes span:nth-child(2) { width: 80px; height: 80px; left: 50%; top: 50%; animation-duration: 7s; }
 .floating-shapes span:nth-child(3) { width: 50px; height: 50px; left: 80%; top: 25%; animation-duration: 5s; }
@@ -96,7 +92,6 @@
   100% { transform: translateY(-20px) translateX(20px) scale(0.9); opacity: 0.6; }
 }
 
-/* Fix icon alignment */
 .tech-icon {
   display: flex;
   flex-direction: column;

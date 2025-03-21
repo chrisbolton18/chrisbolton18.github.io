@@ -1,7 +1,6 @@
 <template>
   <div class="relative w-screen min-h-screen flex flex-col justify-center items-center px-4 py-20 text-white overflow-hidden animate-fade-in">
     
-    <!-- Floating background (optional) -->
     <div class="floating-shapes">
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
@@ -39,7 +38,6 @@
 </template>
 
 <style>
-/* Reuse the same fade-in and floating shape styles */
 .animate-fade-in {
   animation: fadeIn 1s ease-in-out;
 }

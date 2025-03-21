@@ -1,14 +1,12 @@
 <template>
   <div class="relative w-screen h-screen overflow-hidden flex flex-col items-center mt-10">
 
-    <!-- Floating Shapes Background -->
     <div class="floating-shapes">
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <!-- Project Carousel -->
     <div class="p-6 z-10">
       <vueper-slides
         :visible-slides="1"
