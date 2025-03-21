@@ -1,6 +1,7 @@
 <template>
   <div class="relative w-screen min-h-screen flex flex-col justify-center items-center px-4 py-20 text-white overflow-hidden animate-fade-in">
     
+    <!-- Floating Background -->
     <div class="floating-shapes">
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
@@ -9,7 +10,7 @@
     <div class="w-full max-w-2xl text-center relative z-10">
       <h2 class="text-5xl font-bold text-blue-400 mb-6">Get In Touch</h2>
 
-
+      <!-- Contact Form -->
       <form class="space-y-6">
         <input 
           type="text" 
@@ -33,11 +34,45 @@
           Send Message
         </button>
       </form>
+
+      <!-- Social Links Section -->
+      <div class="mt-8 flex flex-col items-center space-y-4">
+        <div class="flex space-x-24">
+          <!-- GitHub -->
+          <a 
+            href="https://github.com/chrisbolton18" 
+            target="_blank" 
+            class="flex items-center space-x-2 text-gray-300 hover:text-white transition"
+          >
+            <img src="/icons/github.svg" class="w-20 h-20" alt="GitHub" />
+          
+          </a>
+          <!-- LinkedIn -->
+          <a 
+            href="https://www.linkedin.com/in/chris-bolton1/" 
+            target="_blank" 
+            class="flex items-center space-x-2 text-gray-300 hover:text-white transition"
+          >
+            <img src="/icons/linkedin.svg" class="w-20 h-20" alt="LinkedIn" />
+       
+          </a>
+          <!-- Email -->
+          <a 
+            href="mailto:chrisbolton@icloud.com" 
+            class="flex items-center space-x-2 text-gray-300 hover:text-white transition"
+          >
+            <img src="/icons/mail.svg" class="w-20 h-20" alt="Email" />
+            
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
 
 <style>
+/* Fade-in animation */
 .animate-fade-in {
   animation: fadeIn 1s ease-in-out;
 }
@@ -46,6 +81,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Floating Background */
 .floating-shapes {
   position: absolute;
   top: 0;
