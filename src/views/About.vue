@@ -7,6 +7,11 @@
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    
     <div class="w-11/12 max-w-6xl text-center space-y-8 relative z-10">  
       <h2 class="text-5xl font-bold text-blue-400 animate-fade-in mb-6">About Me</h2>
       <p class="text-2xl leading-relaxed text-gray-300 animate-fade-in delay-200 mb-6">
