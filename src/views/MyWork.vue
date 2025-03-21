@@ -38,38 +38,46 @@ const projects = [
     </div>
 
     <vueper-slides class="w-full max-w-8xl h-[750px]" arrows :dragging="false" :touchable="false">
-      <vueper-slide v-for="(project, index) in projects" 
-        :key="index"
-        :title="project.title">
-        <template #content>
-          <div class="flex flex-col items-center text-center p-6 h-full max-w-3xl mx-auto">
-            <img :src="project.image" alt="" class="w-full h-[500px] object-contain rounded-lg shadow-lg">
-            
-            <h3 class="text-4xl font-bold mt-6">{{ project.title }}</h3>
+  <vueper-slide v-for="(project, index) in projects" 
+    :key="index"
+    :title="project.title">
+    
+    <template #content>
+      <div class="flex flex-col items-center text-center p-6 h-full max-w-3xl mx-auto">
+        
+        <!-- Project Image -->
+        <img :src="project.image" alt="" class="w-full h-[500px] object-contain rounded-lg shadow-lg">
+        
+        <!-- Add Extra Spacing for Title -->
+        <h3 class="text-4xl font-bold mt-8">{{ project.title }}</h3>
 
-            <p class="text-xl text-gray-300 mt-3 leading-relaxed max-w-2xl">
-              {{ project.description }}
-            </p>
+        <!-- Fix Description Spacing -->
+        <p class="text-xl text-gray-300 mt-4 leading-relaxed max-w-2xl">
+          {{ project.description }}
+        </p>
 
-            <div class="flex gap-4 mt-6">
-              <a 
-                :href="project.link1"
-                target="_blank"
-                class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold text-lg rounded-lg shadow-md transition">
-                View
-              </a>
-              <a 
-                :href="project.link2"
-                target="_blank"
-                class="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-bold text-lg rounded-lg shadow-md transition">
-                Source
-              </a>
-            </div>
+        <!-- Add Spacing for Buttons -->
+        <div class="flex gap-4 mt-6">
+          <a 
+            :href="project.link1"
+            target="_blank"
+            class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold text-lg rounded-lg shadow-md transition">
+            View
+          </a>
+          <a 
+            :href="project.link2"
+            target="_blank"
+            class="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-bold text-lg rounded-lg shadow-md transition">
+            Source
+          </a>
+        </div>
 
-          </div>
-        </template>
-      </vueper-slide>
-    </vueper-slides>
+      </div>
+    </template>
+
+  </vueper-slide>
+</vueper-slides>
+
   </div>
 </template>
 
