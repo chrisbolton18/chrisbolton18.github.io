@@ -9,9 +9,7 @@
 
     <div class="w-full max-w-2xl text-center relative z-10">
       <h2 class="text-5xl font-bold text-blue-400 mb-6">Get In Touch</h2>
-      <p class="text-xl text-gray-300 mb-10">
-        Whether you want to collaborate or just say hi, my inbox is always open.
-      </p>
+
 
       <form class="space-y-6">
         <input 
