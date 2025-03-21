@@ -38,13 +38,13 @@ console.log("🔍 Projects Data Loaded:", projects)
     <!-- 🔥 Check if this is showing in the console -->
     <h1 class="text-3xl font-bold">🔥 VueperSlides Debug</h1>
 
-    <vueper-slides class="w-full max-w-8xl h-[600px]" arrows :dragging ="false" :touchable="false">
+    <vueper-slides class="w-full max-w-4xl h-[600px] mx-auto justify-center items-center" arrows :dragging ="false" :touchable="false">
       <vueper-slide v-for="(project, index) in projects" 
         :key="index"
         :title="project.title">
         
         <template #content>
-          <div class="flex flex-col items-center text-center bg-green-500 p-6">
+          <div class="flex flex-col items-center text-center p-6">
             
             <!-- 🔥 Debugging Text -->
             <p class="text-4xl text-white">🔥 Content is here!</p>
@@ -54,9 +54,9 @@ console.log("🔍 Projects Data Loaded:", projects)
             <p class="text-lg text-white">Description: {{ project?.description || '❌ No Description' }}</p>
 
             <!-- 🔥 Debugging Image -->
-            <img :src="project?.image || 'https://via.placeholder.com/300/FF0000/FFFFFF?text=Image+Error'" 
+            <img :src="project?.image " 
                 alt="Project Image" 
-                class="w-full max-w-lg h-[300px] object-contain rounded-lg shadow-lg mt-4">
+                class="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-lg mt-4">
 
             <!-- 🔥 Debugging Buttons -->
             <div class="flex gap-6 mt-6">
@@ -135,6 +135,7 @@ console.log("🔍 Projects Data Loaded:", projects)
   max-height: 600px !important;
   min-height: 600px !important;
   overflow: hidden !important; /* Ensure no extra empty space */
+  padding-bottom: 50px;
 }
 
 .vueperslide {
