@@ -34,8 +34,8 @@ console.log("🔍 Projects Data Loaded:", projects)
 </script>
 
 <template>
-  <div class="w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 py-16">
-    <!-- 🔥 Check if this is showing in the console -->
+  <div class="w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 py-10">
+  <!-- 🔥 Check if this is showing in the console -->
     <h1 class="text-3xl font-bold">🔥 VueperSlides Debug</h1>
 
     <vueper-slides class="w-full max-w-4xl h-[600px] mx-auto justify-center items-center" arrows :dragging ="false" :touchable="false">
@@ -133,13 +133,12 @@ console.log("🔍 Projects Data Loaded:", projects)
   100% { transform: translateY(-20px) translateX(20px) scale(0.9); opacity: 0.6; }
 }
 .vueperslides {
-  height: 600px !important; /* Force a fixed height */
-  max-height: 600px !important;
-  min-height: 600px !important;
+  height: 700px !important; /* Increased height */
+  max-height: 700px !important;
+  min-height: 700px !important;
   overflow: hidden !important; /* Ensure no extra empty space */
-  padding-bottom: 50px;
+  padding-bottom: 20px; /* Reduce bottom padding */
   background: transparent !important;
-
 }
 
 .vueperslide {
@@ -148,7 +147,6 @@ console.log("🔍 Projects Data Loaded:", projects)
   justify-content: center !important;
   height: 100% !important;
   background: transparent !important;
-
 }
 
 .vueperslides__track {
@@ -156,4 +154,6 @@ console.log("🔍 Projects Data Loaded:", projects)
 }
 
 
-</style>
+
+</style>  
+
