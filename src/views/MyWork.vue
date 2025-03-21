@@ -37,7 +37,7 @@ const projects = [
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <vueper-slides class="w-full max-w-8xl h-[850px]" arrows :dragging="false" :touchable="false">
+    <vueper-slides class="w-full max-w-8xl h-[900px]" arrows :dragging="false" :touchable="false">
   <vueper-slide v-for="(project, index) in projects" 
     :key="index"
     :title="project.title">
@@ -49,15 +49,15 @@ const projects = [
         <img :src="project.image" alt="" class="w-full h-[500px] object-contain rounded-lg shadow-lg">
         
         <!-- Add More Spacing Below Image -->
-        <h3 class="text-4xl font-bold mt-10">{{ project.title }}</h3>
+        <h3 class="text-4xl font-bold mt-12">{{ project.title }}</h3>
 
         <!-- Fix Description Spacing -->
-        <p class="text-xl text-gray-300 mt-6 leading-relaxed max-w-2xl">
+        <p class="text-xl text-gray-300 mt-8 leading-relaxed max-w-2xl">
           {{ project.description }}
         </p>
 
         <!-- Add Spacing for Buttons -->
-        <div class="flex gap-6 mt-8">
+        <div class="flex gap-6 mt-10">
           <a 
             :href="project.link1"
             target="_blank"
@@ -77,6 +77,7 @@ const projects = [
 
   </vueper-slide>
 </vueper-slides>
+
 
 
   </div>
