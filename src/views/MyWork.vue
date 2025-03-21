@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 flex flex-col items-center mt-40">
+  <div class="p-6 flex flex-col items-center mt-10">
     <vueper-slides
       :visible-slides="1"
       :bullets="true"
@@ -20,7 +20,7 @@
             <img
               :src="project.image"
               alt="Project image"
-              class="w-[600px] h-[550px] min-w-[600px] min-h-[550px] rounded-lg mb-4 object-cover"
+              class="w-[400px] h-[400px] min-w-[400px] min-h-[400px] rounded-lg mb-4 object-cover"
             />
             
             <p class="text-gray-350 text-2xl mt-10">{{ project.description }}</p>
