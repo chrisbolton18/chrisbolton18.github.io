@@ -34,9 +34,10 @@ console.log("🔍 Projects Data Loaded:", projects)
 <template>
   <div class="w-screen max-w-8xl min-h-screen flex flex-col justify-center items-center text-white px-8 pt-12 pb-24">
     <!-- 🔥 Debugging Header -->
-    <h1 class="text-3xl font-bold">🔥 VueperSlides Debug</h1>
+    <h1 class="text-3xl font-bold mb-6">🔥 VueperSlides Debug</h1>
 
-    <vueper-slides class="w-full max-w-8xl h-auto mx-auto justify-center items-center" arrows :dragging="false" :touchable="false">
+    <!-- ✅ Fix: Increased Height & Proper Spacing -->
+    <vueper-slides class="w-full max-w-5xl h-[700px] mx-auto justify-center items-center" arrows :dragging="false" :touchable="false">
       <vueper-slide v-for="(project, index) in projects" :key="index" :title="project.title">
         <template #content>
           <div class="flex flex-col items-center text-center p-6">
@@ -47,12 +48,12 @@ console.log("🔍 Projects Data Loaded:", projects)
 
             <img :src="project?.image" 
                 alt="Project Image" 
-                class="w-full max-w-[700px] h-auto object-contain rounded-lg shadow-lg mt-4">
+                class="w-full max-w-[500px] h-auto object-contain rounded-lg shadow-lg mt-4">
 
-            <!-- ✅ Adjusted Dots & Buttons Container -->
-            <div class="w-full flex flex-col items-center justify-center mt-6 gap-6">
+            <!-- ✅ Fix: Keep Dots & Buttons Below Image Properly -->
+            <div class="w-full flex flex-col items-center justify-center mt-8 gap-4">
               <div class="vueperslides__bullets"></div> <!-- Dots -->
-              
+
               <div class="flex gap-6">
                 <a 
                   :href="project?.link1 || '#'"
@@ -105,13 +106,6 @@ console.log("🔍 Projects Data Loaded:", projects)
   animation: float-random 5s infinite alternate ease-in-out;
 }
 
-/* More Floating Circles */
-.floating-shapes span:nth-child(1) { width: 60px; height: 60px; left: 5%; top: 15%; animation-duration: 6s; }
-.floating-shapes span:nth-child(2) { width: 80px; height: 80px; left: 50%; top: 50%; animation-duration: 7s; }
-.floating-shapes span:nth-child(3) { width: 50px; height: 50px; left: 80%; top: 25%; animation-duration: 5s; }
-.floating-shapes span:nth-child(4) { width: 70px; height: 70px; left: 20%; top: 85%; animation-duration: 9s; }
-.floating-shapes span:nth-child(5) { width: 90px; height: 90px; left: 85%; top: 90%; animation-duration: 8s; }
-
 /* 🎯 Vueper Slides Styles */
 .vueperslide {
   display: flex !important;
@@ -129,7 +123,7 @@ console.log("🔍 Projects Data Loaded:", projects)
 .vueperslides__bullets {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
@@ -166,7 +160,7 @@ console.log("🔍 Projects Data Loaded:", projects)
 
 /* 🎯 Spacing Fix */
 .vueperslide .flex.gap-6 {
-  margin-top: 15px;
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
 }
