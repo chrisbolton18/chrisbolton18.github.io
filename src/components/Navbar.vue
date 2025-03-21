@@ -2,16 +2,16 @@
   <nav class="fixed top-5 left-1/2 transform -translate-x-1/2 w-[70%] bg-transparent backdrop-blur-lg bg-opacity-50 text-white py-6 px-16 flex justify-center items-center rounded-full shadow-lg border border-gray-600">
     <ul class="flex space-x-16 text-2xl font-semibold tracking-wide">
       <li>
-        <router-link to="/vue-portfolio/" class="nav-link">Home</router-link>
+        <router-link to="/" class="nav-link">Home</router-link>
       </li>
       <li>
-        <router-link to="/vue-portfolio/about" class="nav-link">About</router-link>
+        <router-link to="/about" class="nav-link">About</router-link>
       </li>
       <li>
-        <router-link to="/vue-portfolio/mywork" class="nav-link">My Work</router-link>
+        <router-link to="/mywork" class="nav-link">My Work</router-link>
       </li>
       <li>
-        <router-link to="/vue-portfolio/contact" class="nav-link">Contact</router-link>
+        <router-link to="/contact" class="nav-link">Contact</router-link>
       </li>
     </ul>
   </nav>
