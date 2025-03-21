@@ -37,16 +37,19 @@ const projects = [
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <vueper-slides class="w-full max-w-6xl h-[900px] flex items-center justify-center" arrows :dragging="false" :touchable="false">
+    <vueper-slides class="w-full max-w-6xl h-[800px] flex items-center justify-center bg-red-500" arrows :dragging="false" :touchable="false">
   <vueper-slide v-for="(project, index) in projects" 
     :key="index"
     :title="project.title">
     
     <template #content>
-      <div class="flex flex-col items-center text-center h-full w-full px-8">
+      <div class="flex flex-col items-center text-center h-full w-full px-8 bg-green-500">
         
+        <!-- DEBUG TEXT -->
+        <p class="text-4xl text-white">TEST CONTENT</p>
+
         <!-- Project Image -->
-        <img :src="project.image" alt="" class="w-full max-w-lg h-[400px] object-contain rounded-lg shadow-lg">
+        <img :src="project.image" alt="Project Image" class="w-full max-w-lg h-[300px] object-contain rounded-lg shadow-lg">
         
         <!-- Title -->
         <h3 class="text-3xl font-bold mt-6">{{ project.title }}</h3>
