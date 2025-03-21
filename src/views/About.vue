@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-screen min-h-screen flex flex-col justify-start items-center text-white px-8 pt-20 pb-32 overflow-hidden animate-fade-in">
+  <div class="relative w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 pt-32 pb-40 overflow-hidden animate-fade-in">
     
     <!-- Floating Animated Background -->
     <div class="floating-shapes">
