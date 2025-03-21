@@ -5,7 +5,7 @@
       :bullets="true"
       :arrows="true"
       :touchable="false"
-      fixed-height="999px"
+      fixed-height="700px"
       class="rounded-2xl shadow-md w-[999px] mx-auto"
     >
       <vueper-slide
