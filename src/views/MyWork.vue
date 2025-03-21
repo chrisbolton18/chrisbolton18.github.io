@@ -2,7 +2,7 @@
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 
-// ✅ Debugging: Check if the component is loading
+// ✅ Debugging: Check if component is loaded
 console.log("🔥 VueperSlides Component Loaded");
 
 // ✅ Confirm the data is correct
@@ -30,7 +30,7 @@ const projects = [
   }
 ];
 
-// 🔥 Debug: Log each project data
+// 🔥 Debug: Log each project and image URL
 projects.forEach((project, index) => {
   console.log(`🖼️ Project ${index + 1}:`, project);
   console.log(`🔗 Image URL: ${project.image}`);
@@ -41,8 +41,14 @@ projects.forEach((project, index) => {
   <div class="w-screen min-h-screen flex flex-col justify-center items-center text-white px-8 pt-12 pb-24">
     <h1 class="text-3xl font-bold mb-12">🔥 My Projects (Debug Mode)</h1>
     
-    <!-- VueperSlides set to maximum height -->
-    <vueper-slides class="w-full max-w-6xl h-screen mx-auto flex items-center justify-center" arrows :dragging="false" :touchable="false">
+    <!-- VueperSlides set to maximum height (100vh) and removed arrows -->
+    <vueper-slides 
+      class="w-full max-w-6xl h-screen mx-auto flex items-center justify-center"
+      :dragging="false"
+      :touchable="false"
+      :arrows="false"
+      :bullets="true">
+      
       <vueper-slide v-for="(project, i) in projects" :key="i">
         <template #content>
           <div class="bg-gray-800 p-8 rounded-lg w-full h-full flex flex-col items-center justify-center">
@@ -59,7 +65,7 @@ projects.forEach((project, index) => {
                  :alt="project.title"
                  class="max-w-[90%] max-h-[80vh] object-contain rounded-lg shadow-lg mt-4"
                  @error="console.error(`❌ Image failed to load:`, project.image)"
-                 @load="console.log(`✅ Image loaded:`, project.image)">
+                 @load="console.log(`✅ Image loaded successfully:`, project.image)">
 
             <p class="text-white mt-4">{{ project.description }}</p>
 
@@ -70,6 +76,7 @@ projects.forEach((project, index) => {
           </div>
         </template>
       </vueper-slide>
+
     </vueper-slides>
   </div>
 </template>
@@ -91,6 +98,11 @@ projects.forEach((project, index) => {
   max-width: 90% !important;
   max-height: 80vh !important;
   object-fit: contain !important;
+}
+
+/* 🎯 Remove Arrows */
+.vueperslides__arrow {
+  display: none !important;
 }
 
 /* 🔵 Fix Bullet Indicators */
