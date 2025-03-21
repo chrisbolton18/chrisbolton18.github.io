@@ -44,45 +44,45 @@ console.log("🔍 Projects Data Loaded:", projects)
         :title="project.title">
         
         <template #content>
-          
-  <div class="flex flex-col items-center text-center p-6 bg-transparent">
+  <div class="flex flex-col items-center text-center p-6">
+    
+    <!-- Debugging Text -->
+    <p class="text-4xl text-white">🔥 Content is here!</p>
 
-            
-            <!-- 🔥 Debugging Text -->
-            <p class="text-4xl text-white">🔥 Content is here!</p>
+    <!-- Debugging Project Info -->
+    <p class="text-lg text-white mt-4">Title: {{ project?.title || '❌ No Title' }}</p>
+    <p class="text-lg text-white">Description: {{ project?.description || '❌ No Description' }}</p>
 
-            <!-- 🔥 Debugging Project Info -->
-            <p class="text-lg text-white mt-4">Title: {{ project?.title || '❌ No Title' }}</p>
-            <p class="text-lg text-white">Description: {{ project?.description || '❌ No Description' }}</p>
+    <!-- Image -->
+    <img :src="project?.image " 
+        alt="Project Image" 
+        class="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-lg mt-4">
 
-            <!-- 🔥 Debugging Image -->
-            <img :src="project?.image " 
-                alt="Project Image" 
-                class="w-full max-w-[400px] h-auto object-contain rounded-lg shadow-lg mt-4">
+    <!-- Dots & Buttons Wrapper -->
+    <div class="w-full flex flex-col items-center justify-center mt-6 gap-4">
+      <!-- Dots -->
+      <div class="vueperslides__bullets"></div>
 
-            <!-- 🔥 Debugging Buttons -->
-            <div class="flex gap-6 mt-6">
-              <a 
-                :href="project?.link1 || '#'"
-                target="_blank"
-                class="px-5 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-md transition">
-                View
-              </a>
-              <a 
-                :href="project?.link2 || '#'"
-                target="_blank"
-                class="px-5 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg rounded-lg shadow-md transition">
-                Source
-              </a>
-            </div>
+      <!-- Buttons -->
+      <div class="flex gap-6">
+        <a 
+          :href="project?.link1 || '#'"
+          target="_blank"
+          class="px-5 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-md transition">
+          View
+        </a>
+        <a 
+          :href="project?.link2 || '#'"
+          target="_blank"
+          class="px-5 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg rounded-lg shadow-md transition">
+          Source
+        </a>
+      </div>
+    </div>
 
-          </div>
-        </template>
-
-      </vueper-slide>
-    </vueper-slides>
   </div>
 </template>
+
 
 
 <style>
@@ -146,6 +146,17 @@ console.log("🔍 Projects Data Loaded:", projects)
 .vueperslides__track {
   height: 100% !important;
 }
+
+.vueperslides__bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* Add spacing */
+}
+
+.vueperslide .flex.gap-6 {
+  margin-top: 10px; /* Adjust button spacing */
+}
+
 
 
 
