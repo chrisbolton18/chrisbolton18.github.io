@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 flex flex-col items-center mt-20">
+  <div class="p-6 flex flex-col items-center mt-10">
     <vueper-slides
       :visible-slides="1"
       :bullets="true"
