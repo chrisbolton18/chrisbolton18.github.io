@@ -131,15 +131,15 @@ console.log("🔍 Projects Data Loaded:", projects)
   100% { transform: translateY(-20px) translateX(20px) scale(0.9); opacity: 0.6; }
 }
 .vueperslides {
-  height: auto !important;  /* ✅ Let VueperSlides fit content */
+  height: auto !important;  /* ✅ Auto-adjust height */
 }
 
 .vueperslides__track {
-  min-height: 600px; /* Adjust height for content */
+  min-height: 600px; /* ✅ Ensure content fits */
 }
 
 .vueperslides__arrow {
-  z-index: 10 !important;  /* Ensure arrows are visible */
+  z-index: 10 !important;  /* ✅ Ensure arrows stay visible */
 }
 
 </style>
