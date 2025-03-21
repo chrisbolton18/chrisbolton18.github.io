@@ -37,37 +37,37 @@ const projects = [
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <vueper-slides class="w-full max-w-8xl h-[900px] flex items-center justify-center" arrows :dragging="false" :touchable="false">
+    <vueper-slides class="w-full max-w-6xl h-[900px] flex items-center justify-center" arrows :dragging="false" :touchable="false">
   <vueper-slide v-for="(project, index) in projects" 
     :key="index"
     :title="project.title">
     
     <template #content>
-      <div class="flex flex-col items-center text-center h-full w-full justify-center py-16">
+      <div class="flex flex-col items-center text-center h-full w-full px-8">
         
-        <!-- Project Image (Fixed Size) -->
-        <img :src="project.image" alt="" class="w-full max-w-lg h-[500px] object-contain rounded-lg shadow-lg">
+        <!-- Project Image -->
+        <img :src="project.image" alt="" class="w-full max-w-lg h-[400px] object-contain rounded-lg shadow-lg">
         
-        <!-- Title (Properly Positioned) -->
-        <h3 class="text-4xl font-bold mt-10">{{ project.title }}</h3>
+        <!-- Title -->
+        <h3 class="text-3xl font-bold mt-6">{{ project.title }}</h3>
 
-        <!-- Description (Perfect Spacing) -->
-        <p class="text-xl text-gray-300 mt-6 leading-relaxed max-w-2xl">
+        <!-- Description -->
+        <p class="text-lg text-gray-300 mt-4 leading-relaxed max-w-2xl">
           {{ project.description }}
         </p>
 
-        <!-- Buttons (Locked in Place) -->
-        <div class="flex gap-6 mt-8">
+        <!-- Buttons -->
+        <div class="flex gap-6 mt-6">
           <a 
             :href="project.link1"
             target="_blank"
-            class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold text-lg rounded-lg shadow-md transition">
+            class="px-5 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-md transition">
             View
           </a>
           <a 
             :href="project.link2"
             target="_blank"
-            class="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-bold text-lg rounded-lg shadow-md transition">
+            class="px-5 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold text-lg rounded-lg shadow-md transition">
             Source
           </a>
         </div>
