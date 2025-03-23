@@ -97,13 +97,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
   width: 90px;
+  cursor: pointer;
+}
+.tech-icon:hover {
+  transform: scale(1.15);
+}
+.tech-icon:hover img {
+  filter: brightness(1.2) invert(0.9) sepia(0.5) saturate(2) hue-rotate(180deg);
 }
 .tech-icon img {
   width: 50px;
   height: 50px;
   filter: brightness(0) invert(1);
+  transition: filter 0.3s ease-in-out;
 }
 .tech-icon p {
   margin-top: 8px;
@@ -111,5 +119,9 @@
   color: #ffffff;
   opacity: 0.8;
   text-align: center;
+  transition: opacity 0.3s ease-in-out;
+}
+.tech-icon:hover p {
+  opacity: 1;
 }
 </style>
