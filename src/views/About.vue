@@ -6,7 +6,7 @@
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-    <div class="w-11/12 max-w-6xl text-center space-y-16 relative z-10 mt-5 mb-20">  
+    <div class="w-11/12 max-w-7xl text-center space-y-16 relative z-10 mt-5 mb-20">  
       <h2 class="text-5xl font-bold text-blue-400 animate-fade-in">About Me</h2>
       <p class="text-2xl leading-relaxed text-gray-300 animate-fade-in delay-200">
         I am in my third year of studying Computer Science at the University of Windsor,
@@ -26,11 +26,12 @@
           <div class="flex flex-wrap justify-center gap-8">
             <div class="tech-icon"><img src="/icons/html.svg" alt="HTML5" /><p>HTML5</p></div>
             <div class="tech-icon"><img src="/icons/css.svg" alt="CSS3" /><p>CSS3</p></div>
-            <div class="tech-icon"><img src="/icons/javascript.svg" alt="JavaScript" /><p>JavaScript</p></div>
             <div class="tech-icon"><img src="/icons/react.svg" alt="React.js" /><p>React.js</p></div>
             <div class="tech-icon"><img src="/icons/vue.svg" alt="Vue.js" /><p>Vue.js</p></div>
+            <div class="tech-icon"><img src="/icons/threeJs.svg" alt="Three.js" /><p>Three.js</p></div>
             <div class="tech-icon"><img src="/icons/tailwind.svg" alt="TailwindCSS" /><p>TailwindCSS</p></div>
             <div class="tech-icon"><img src="/icons/typescript.svg" alt="TypeScript" /><p>TypeScript</p></div>
+            <div class="tech-icon"><img src="/icons/bootstrap.svg" alt="Bootstrap.js" /><p>Bootstrap</p></div>
           </div>
           <div class="flex flex-wrap justify-center gap-8">
             <div class="tech-icon"><img src="/icons/python.svg" alt="Python" /><p>Python</p></div>
@@ -40,6 +41,7 @@
             <div class="tech-icon"><img src="/icons/dotnet.svg" alt=".NET" /><p>.NET</p></div>
             <div class="tech-icon"><img src="/icons/php.svg" alt="PHP" /><p>PHP</p></div>
             <div class="tech-icon"><img src="/icons/mysql.svg" alt="MySQL" /><p>MySQL</p></div>
+            <div class="tech-icon"><img src="/icons/postgresql.svg" alt="PostgreSQL" /><p>PostgreSQL</p></div>
           </div>
           <div class="flex flex-wrap justify-center gap-8">
             <div class="tech-icon"><img src="/icons/git.svg" alt="Git" /><p>Git</p></div>
@@ -47,6 +49,7 @@
             <div class="tech-icon"><img src="/icons/figma.svg" alt="Figma" /><p>Figma</p></div>
             <div class="tech-icon"><img src="/icons/uml.svg" alt="UML" /><p>UML</p></div>
             <div class="tech-icon"><img src="/icons/docker.svg" alt="Docker" /><p>Docker</p></div>
+            <div class="tech-icon"><img src="/icons/heroku.svg" alt="Heroku" /><p>Heroku</p></div>
           </div>
         </div>
       </div>
