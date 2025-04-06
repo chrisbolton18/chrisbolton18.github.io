@@ -44,7 +44,7 @@
             target="_blank" 
             class="flex items-center space-x-2 text-gray-300 hover:text-white transition"
           >
-            <img src="/icons/github.svg" class="w-20 h-20" alt="GitHub" />
+            <img src="/icons/github.svg" class="w-20 h-20 filter invert" alt="GitHub" />
           
           </a>
           <!-- LinkedIn -->
@@ -53,7 +53,7 @@
             target="_blank" 
             class="flex items-center space-x-2 text-gray-300 hover:text-white transition"
           >
-            <img src="/icons/linkedin.svg" class="w-20 h-20" alt="LinkedIn" />
+            <img src="/icons/linkedin.svg" class="w-20 h-20 filter invert" alt="LinkedIn" />
        
           </a>
           <!-- Email -->
@@ -61,7 +61,7 @@
             href="mailto:chrisbolton@icloud.com" 
             class="flex items-center space-x-2 text-gray-300 hover:text-white transition"
           >
-            <img src="/icons/mail.svg" class="w-20 h-20" alt="Email" />
+            <img src="/icons/mail.svg" class="w-20 h-20 filter invert" alt="Email" />
             
           </a>
         </div>
