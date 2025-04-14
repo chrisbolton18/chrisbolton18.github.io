@@ -7,7 +7,7 @@
     </div>
 
     <div class="p-6 z-10">
-      <!-- Main Slides -->
+
       <vueper-slides
         ref="main"
         :visible-slides="1"
@@ -48,7 +48,6 @@
         </vueper-slide>
       </vueper-slides>
 
-      <!-- Thumbnail Slides -->
       <vueper-slides
         class="no-shadow thumbnails mt-4"
         ref="thumbs"
@@ -107,7 +106,6 @@ const projects = [
 </script>
 
 <style scoped>
-/* animation background (unchanged) */
 .floating-shapes {
   position: absolute;
   top: 0;
