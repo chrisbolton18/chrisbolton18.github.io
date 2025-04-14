@@ -74,6 +74,13 @@ const projects = [
     sourceLink: 'https://github.com/chrisbolton18/ExoExplorer'
   },
   {
+    title: 'Proto Plastics',
+    description: 'Custom modern website for a plastic injection molding manufacturing company using C#. Features a responsive UI and includes dedicated pages for About, Machine Specifications, and Contact.',
+    image: 'https://protoplastics.ca/proto-logo-white.png',
+    viewLink: 'https://protoplastics.ca/',
+    sourceLink: 'https://github.com/bolst/Proto-Plastics'
+  },
+  {
     title: 'Data Structures & Algorithms Tutor',
     description: 'Web app designed to help users visualize and understand various data structures and algorithms. It provides a user-friendly interface for exploring concepts such as arrays, linked lists, and more.',
     image: 'https://xuiksercgzfjbujbeupm.supabase.co/storage/v1/object/public/logos//DSA.jpeg',
