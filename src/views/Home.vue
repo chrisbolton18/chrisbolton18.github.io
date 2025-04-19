@@ -1,21 +1,33 @@
 <template>
   <div class="relative w-screen h-screen overflow-hidden">
-
     <div class="floating-shapes">
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
       <span></span><span></span><span></span><span></span><span></span>
     </div>
 
-
     <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6">
       <h1 class="text-8xl font-extrabold animate-fade-in">Chris Bolton</h1>
       <p class="text-3xl mt-4 text-gray-400 animate-fade-in delay-200">
         Full-Stack Developer || Student at the University of Windsor
       </p>
+
+      <div v-if="track" class="mt-40 animate-fade-in delay-300 text-2xl text-gray-300 flex items-center gap-2">
+        <span class="text-base">🎧</span>
+        <span class="text-gray-400">Currently listening to:</span>
+        <a
+          :href="track.link"
+          target="_blank"
+          class="text-blue-400 hover:text-blue-200 font-medium transition"
+        >
+          {{ track.name }} — {{ track.artists }}
+        </a>
+    </div>
+
     </div>
   </div>
 </template>
+
 
 
 <style>
@@ -84,3 +96,24 @@
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      track: null,
+    };
+  },
+  mounted() {
+    fetch('/data/spotify.json')
+      .then((res) => res.json())
+      .then((data) => {
+        this.track = data;
+      })
+      .catch((err) => {
+        console.error("Failed to load spotify.json", err);
+      });
+  },
+};
+</script>
+
