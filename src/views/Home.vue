@@ -13,7 +13,6 @@
       </p>
 
       <div v-if="track" class="mt-40 animate-fade-in delay-300 text-2xl text-gray-300 flex items-center gap-2">
-        <span class="text-base">🎧</span>
         <span class="text-gray-400">Currently listening to:</span>
         <a
           :href="track.link"
